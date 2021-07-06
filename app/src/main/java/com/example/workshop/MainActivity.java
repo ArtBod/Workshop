@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
+        adapter = new WorkshopAdapter(MainActivity.this,new ArrayList());
+        recyclerView.setAdapter(adapter);
         requestQueue = VolleySingleton.getmInstance(this).getRequestQueue();
 
         workshopItemList=new ArrayList<>();
